@@ -1,0 +1,402 @@
+[gd_scene load_steps=23 format=3 uid="uid://csmnvmv8r6wio"]
+
+[ext_resource type="Script" path="res://Menu_principal.gd" id="1_b3uai"]
+[ext_resource type="Shader" path="res://movimientoBackGround.gdshader" id="2_482b2"]
+[ext_resource type="Texture2D" uid="uid://cnsrycq6quvav" path="res://Menu/BotonesPaws.png" id="2_eby76"]
+[ext_resource type="FontFile" uid="uid://dylwduvsv8ish" path="res://Menu/8-bit Arcade In.ttf" id="2_he22s"]
+[ext_resource type="Texture2D" uid="uid://8n2g7po24pp0" path="res://Menu/NubesMenu.png" id="3_58kwn"]
+[ext_resource type="Texture2D" uid="uid://dr5id1qwlj0sk" path="res://Menu/Cat-Paws-Dungeon-Huella.png" id="4_orh3o"]
+[ext_resource type="Texture2D" uid="uid://xj5hthq0c1og" path="res://Menu/Fondoopcionesmenu.png" id="7_8qgxg"]
+[ext_resource type="Texture2D" uid="uid://dr0msff6ytvgf" path="res://Menu/BotonSlider.png" id="8_ttjx8"]
+[ext_resource type="Texture2D" uid="uid://qsxytavj1gi3" path="res://Menu/BotonSliderpresionado.png" id="9_nkg56"]
+[ext_resource type="StyleBox" uid="uid://bbhc3uhfx4ooa" path="res://Menu/stylevolumen.tres" id="10_gw27u"]
+[ext_resource type="StyleBox" uid="uid://crxwd6ngb578a" path="res://Menu/FondoSlider.tres" id="10_q5yly"]
+[ext_resource type="StyleBox" uid="uid://cpc1ran44bnrg" path="res://Menu/slidervolumen.tres" id="12_j0l28"]
+[ext_resource type="AudioStream" uid="uid://14fb118d7ldl" path="res://Musica/musica/menu music.ogg" id="13_ac7t5"]
+[ext_resource type="Script" path="res://Buttonvolver.gd" id="14_j3jx5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xsg6n"]
+shader = ExtResource("2_482b2")
+shader_parameter/scroll_speed = 0.03
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v0raw"]
+texture = ExtResource("2_eby76")
+expand_margin_bottom = 4.0
+region_rect = Rect2(15, 1, 66, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7up3"]
+texture = ExtResource("2_eby76")
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(96, 0, 96, 34)
+modulate_color = Color(1, 0.945098, 0.996078, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2hbp"]
+texture = ExtResource("2_eby76")
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(96, 0, 96, 34)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8np3a"]
+texture = ExtResource("2_eby76")
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(96, 0, 96, 34)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d5i13"]
+texture = ExtResource("2_eby76")
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(96, 0, 96, 34)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqm3m"]
+texture = ExtResource("2_eby76")
+expand_margin_bottom = 4.0
+region_rect = Rect2(15, 1, 66, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_16r28"]
+texture = ExtResource("2_eby76")
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(96, 0, 96, 34)
+
+[node name="Node2D" type="Node2D"]
+use_parent_material = true
+position = Vector2(336, 0)
+script = ExtResource("1_b3uai")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_xsg6n")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -352.0
+offset_right = 408.0
+offset_bottom = 640.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.866263, 0.693352)
+texture = ExtResource("3_58kwn")
+stretch_mode = 1
+
+[node name="Menu Princpial" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Menu Princpial"]
+offset_left = -250.0
+offset_right = 390.0
+offset_bottom = 640.0
+scale = Vector2(0.57789, 0.367153)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("4_orh3o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu Princpial"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -142.0
+offset_top = 235.0
+offset_right = -17.0
+offset_bottom = 365.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.23485, 1.45698)
+size_flags_horizontal = 10
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="CONTINUAR" type="Button" parent="Menu Princpial/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.952941, 0.839216, 0.172549, 1)
+theme_override_colors/font_focus_color = Color(0.917647, 0.447059, 0.0313726, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_v0raw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_u7up3")
+action_mode = 0
+button_mask = 0
+text = "CONTINUAR"
+text_overrun_behavior = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="espacio" type="Control" parent="Menu Princpial/VBoxContainer"]
+layout_mode = 2
+
+[node name="JUGAR" type="Button" parent="Menu Princpial/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.917647, 0.447059, 0.0313726, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_v0raw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_w2hbp")
+button_mask = 0
+text = "JUGAR"
+
+[node name="espacio2" type="Control" parent="Menu Princpial/VBoxContainer"]
+layout_mode = 2
+
+[node name="OPCIONES" type="Button" parent="Menu Princpial/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.917647, 0.447059, 0.0313726, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_v0raw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_8np3a")
+button_mask = 0
+text = "OPCIONES"
+text_overrun_behavior = 2
+
+[node name="espacio3" type="Control" parent="Menu Princpial/VBoxContainer"]
+layout_mode = 2
+
+[node name="Salir" type="Button" parent="Menu Princpial/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+mouse_default_cursor_shape = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.917647, 0.447059, 0.0313726, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_v0raw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_d5i13")
+button_mask = 0
+text = "SALIR"
+text_overrun_behavior = 2
+
+[node name="MarginContainer" type="Control" parent="Menu Princpial"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 472.0
+offset_top = 16.0
+offset_right = 592.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="ColorRect" type="TextureRect" parent="Menu Princpial/MarginContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_right = 104.0
+offset_bottom = 254.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.5)
+texture = ExtResource("7_8qgxg")
+
+[node name="Opciones" type="Label" parent="Menu Princpial/MarginContainer"]
+layout_mode = 2
+offset_left = -25.0
+offset_top = 26.0
+offset_right = 155.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.054902, 0, 1)
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 48
+text = "OPCIONES"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="Tamaño Pantalla" type="VBoxContainer" parent="Menu Princpial/MarginContainer"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = 51.0
+offset_right = -54.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="Pantalla Completa" type="Label" parent="Menu Princpial/MarginContainer/Tamaño Pantalla"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.054902, 0, 1)
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 16
+text = "PANTALLACOMPLETA"
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckBox" type="CheckBox" parent="Menu Princpial/MarginContainer/Tamaño Pantalla"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+alignment = 1
+
+[node name="Sonido" type="VBoxContainer" parent="Menu Princpial/MarginContainer"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 148.0
+offset_right = 142.0
+offset_bottom = 241.0
+
+[node name="Audio" type="Label" parent="Menu Princpial/MarginContainer/Sonido"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.054902, 0, 1)
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 32
+text = "AUDIO"
+
+[node name="Musica" type="Label" parent="Menu Princpial/MarginContainer/Sonido"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 18
+text = "MUSICA"
+
+[node name="HSlider" type="HSlider" parent="Menu Princpial/MarginContainer/Sonido"]
+layout_mode = 2
+mouse_filter = 2
+mouse_force_pass_scroll_events = false
+theme_override_icons/grabber = ExtResource("8_ttjx8")
+theme_override_icons/grabber_highlight = ExtResource("9_nkg56")
+theme_override_styles/slider = ExtResource("10_q5yly")
+theme_override_styles/grabber_area = ExtResource("10_gw27u")
+theme_override_styles/grabber_area_highlight = ExtResource("12_j0l28")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Efectos" type="Label" parent="Menu Princpial/MarginContainer/Sonido"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 18
+text = "EFECTOS"
+
+[node name="HSlider2" type="HSlider" parent="Menu Princpial/MarginContainer/Sonido"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_icons/grabber = ExtResource("8_ttjx8")
+theme_override_icons/grabber_highlight = ExtResource("9_nkg56")
+theme_override_styles/slider = ExtResource("10_q5yly")
+theme_override_styles/grabber_area = ExtResource("10_gw27u")
+theme_override_styles/grabber_area_highlight = ExtResource("12_j0l28")
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="Lenguaje" type="VBoxContainer" parent="Menu Princpial/MarginContainer"]
+layout_mode = 0
+offset_left = -31.0
+offset_top = 256.0
+offset_right = 152.0
+offset_bottom = 309.0
+
+[node name="Label" type="Label" parent="Menu Princpial/MarginContainer/Lenguaje"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.054902, 0, 1)
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 30
+text = "LENGUAJE"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu Princpial/MarginContainer/Lenguaje"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Español" type="Button" parent="Menu Princpial/MarginContainer/Lenguaje/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 0
+toggle_mode = true
+button_mask = 0
+text = "ESPANOL"
+flat = true
+
+[node name="Label" type="Label" parent="Menu Princpial/MarginContainer/Lenguaje/HBoxContainer"]
+layout_mode = 2
+text = "     "
+
+[node name="Ingles" type="Button" parent="Menu Princpial/MarginContainer/Lenguaje/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_he22s")
+toggle_mode = true
+button_mask = 0
+text = "ENGLISH"
+flat = true
+
+[node name="Button" type="Button" parent="Menu Princpial/MarginContainer"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 352.0
+offset_right = 100.0
+offset_bottom = 383.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.917647, 0.447059, 0.0313726, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_he22s")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_yqm3m")
+theme_override_styles/focus = SubResource("StyleBoxTexture_16r28")
+button_mask = 0
+text = "ATRAS"
+text_overrun_behavior = 2
+script = ExtResource("14_j3jx5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_ac7t5")
+autoplay = true
+bus = &"Musica"
+
+[connection signal="pressed" from="Menu Princpial/VBoxContainer/JUGAR" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Menu Princpial/VBoxContainer/OPCIONES" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="Menu Princpial/MarginContainer/Tamaño Pantalla/CheckBox" to="." method="_on_check_box_pressed"]
+[connection signal="value_changed" from="Menu Princpial/MarginContainer/Sonido/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Menu Princpial/MarginContainer/Sonido/HSlider2" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="toggled" from="Menu Princpial/MarginContainer/Lenguaje/HBoxContainer/Español" to="." method="_on_español_toggled"]
+[connection signal="toggled" from="Menu Princpial/MarginContainer/Lenguaje/HBoxContainer/Ingles" to="." method="_on_ingles_toggled"]
+[connection signal="pressed" from="Menu Princpial/MarginContainer/Button" to="Menu Princpial/MarginContainer/Button" method="_on_pressed"]

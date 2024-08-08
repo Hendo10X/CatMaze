@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://yvmgbxy0m4na"]
+
+[ext_resource type="FontFile" uid="uid://dylwduvsv8ish" path="res://Menu/8-bit Arcade In.ttf" id="1_skn3f"]
+[ext_resource type="Script" path="res://Niveles/HudDisparos.gd" id="2_xfr64"]
+
+[sub_resource type="FontVariation" id="FontVariation_no0ye"]
+base_font = ExtResource("1_skn3f")
+
+[node name="Disparos" type="Label"]
+offset_right = 41.0
+offset_bottom = 37.0
+theme_override_fonts/font = SubResource("FontVariation_no0ye")
+theme_override_font_sizes/font_size = 50
+text = " "
+script = ExtResource("2_xfr64")

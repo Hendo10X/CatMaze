@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://crc8yi1e7br3v"]
+
+[ext_resource type="Script" path="res://lechep.gd" id="1_nx66s"]
+[ext_resource type="Texture2D" uid="uid://bilgff3icndas" path="res://Tile/Leche32x32.png" id="2_m40lk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqork"]
+size = Vector2(32, 32)
+
+[node name="lechep" type="RigidBody2D" groups=["inmovible", "lechep", "solido"]]
+collision_layer = 512
+collision_mask = 0
+gravity_scale = 0.0
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_nx66s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_m40lk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nqork")

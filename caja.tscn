@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgyivbuycxxfh"]
+
+[ext_resource type="Script" path="res://empujecaja.gd" id="1_3x8p5"]
+[ext_resource type="Texture2D" uid="uid://csv344ogy4o7m" path="res://Sprite/Caja.png" id="2_5oyot"]
+[ext_resource type="Texture2D" uid="uid://c0uh3f8krb80c" path="res://Sprite/LenguaRanaAtrapaCaja.png" id="2_hvf8d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdpeu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hvf8d")
+}],
+"loop": false,
+"name": &"atrapadaxrana",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5oyot")
+}],
+"loop": false,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vh7wj"]
+size = Vector2(30, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkxgp"]
+size = Vector2(24, 24)
+
+[node name="Caja" type="RigidBody2D" groups=["avoid", "enemigos", "movible"]]
+collision_layer = 16416
+collision_mask = 9214
+lock_rotation = true
+script = ExtResource("1_3x8p5")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." groups=["transportar"]]
+sprite_frames = SubResource("SpriteFrames_xdpeu")
+animation = &"atrapadaxrana"
+autoplay = "normal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9.53674e-07)
+shape = SubResource("RectangleShape2D_vh7wj")
+one_way_collision_margin = 0.0
+
+[node name="CollisionRana" type="Area2D" parent="."]
+collision_mask = 12288
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionRana"]
+shape = SubResource("RectangleShape2D_rkxgp")
+one_way_collision_margin = 64.0
+debug_color = Color(0.839216, 0.784314, 0, 0.419608)
+
+[node name="Raycast" type="Node2D" parent="."]
+
+[node name="Abajo" type="RayCast2D" parent="Raycast"]
+position = Vector2(8, 0)
+target_position = Vector2(0, 18)
+collision_mask = 115581
+
+[node name="Abajo2" type="RayCast2D" parent="Raycast"]
+position = Vector2(-8, 0)
+target_position = Vector2(0, 18)
+collision_mask = 115581
+
+[node name="Arriba" type="RayCast2D" parent="Raycast"]
+position = Vector2(8, 0)
+target_position = Vector2(0, -18)
+collision_mask = 115581
+
+[node name="Arriba2" type="RayCast2D" parent="Raycast"]
+position = Vector2(-8, 0)
+target_position = Vector2(0, -18)
+collision_mask = 115581
+
+[node name="Izquierda" type="RayCast2D" parent="Raycast"]
+position = Vector2(0, 8)
+target_position = Vector2(-18, 0)
+collision_mask = 115581
+
+[node name="Izquierda2" type="RayCast2D" parent="Raycast"]
+position = Vector2(0, -8)
+target_position = Vector2(-18, 0)
+collision_mask = 115581
+
+[node name="Derecha" type="RayCast2D" parent="Raycast"]
+position = Vector2(0, 8)
+target_position = Vector2(18, 0)
+collision_mask = 115581
+
+[node name="Derecha2" type="RayCast2D" parent="Raycast"]
+position = Vector2(0, -8)
+target_position = Vector2(18, 0)
+collision_mask = 115581
+
+[connection signal="area_entered" from="CollisionRana" to="." method="_on_collision_rana_area_entered"]
